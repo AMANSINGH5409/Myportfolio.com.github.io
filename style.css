@@ -301,7 +301,7 @@ section .title::after{
     width: 95%;
 }
 .skill-content .right .web::before{
-    width: 70%;
+    width: 80%;
 }
 .skill-content .right .java::before{
     width: 95%;
@@ -319,7 +319,7 @@ section .title::after{
     width: 90%;
 }
 .skill-content .right .html::before{
-    width: 40%;
+    width: 50%;
 }
 .skill-content .right .css::before{
     width: 20%;
