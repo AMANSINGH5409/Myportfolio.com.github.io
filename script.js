@@ -12,6 +12,10 @@ $(document).ready(function(){
         $('.navBar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+    $('.navBar .menu a').click(function(){
+        $('.navBar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
 });
 
 // typing animation 
