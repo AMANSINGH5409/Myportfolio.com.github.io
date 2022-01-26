@@ -301,10 +301,10 @@ section .title::after{
     width: 95%;
 }
 .skill-content .right .web::before{
-    width: 50%;
+    width: 70%;
 }
 .skill-content .right .java::before{
-    width: 75%;
+    width: 95%;
 }
 .skill-content .right .cc::before{
     width: 70%;
@@ -313,19 +313,19 @@ section .title::after{
     width: 80%;
 }
 .skill-content .right .ps::before{
-    width: 75%;
+    width: 80%;
 }
 .skill-content .right .gg::before{
     width: 90%;
 }
 .skill-content .right .html::before{
-    width: 75%;
+    width: 40%;
 }
 .skill-content .right .css::before{
-    width: 50%;
+    width: 20%;
 }
 .skill-content .right .js::before{
-    width: 40%;
+    width: 10%;
 }
 
 /* Contact Section Styling  */
