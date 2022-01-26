@@ -233,18 +233,18 @@
                     <form action="#">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" id="Name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="text" placeholder="Email-ID" required>
+                                <input type="text" id="Email" placeholder="Email-ID" required>
                             </div>
                         </div>
                         <div class="field subject">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" id="Subject" placeholder="Subject" required>
                         </div>
                         <div class="field project">
-                            <textarea cols="30" rows="10" placeholder="Describe project idea..."></textarea>
-                            <div class="button">
+                            <textarea cols="30" rows="10" id="Project" placeholder="Describe project idea..."></textarea>
+                            <div class="button" onclick="sendMessage()">
                                 <button type="submit">Send Message</button>
                             </div>
                         </div>
@@ -259,5 +259,37 @@
         <span>Created and Designed By <a href="#">Aman Rajan Singh</a> | <span class="far fa-copyright"></span>2022 All rights reserved.</span>
     </footer>
 <script src="script.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbxIbMoVucNztErMah8SCXNEjha6Fe9Ps",
+      authDomain: "myportfolio-c8630.firebaseapp.com",
+      projectId: "myportfolio-c8630",
+      storageBucket: "myportfolio-c8630.appspot.com",
+      messagingSenderId: "823860394299",
+      appId: "1:823860394299:web:be6b2a2d7461bcab641f1e",
+      measurementId: "G-CP2KCW0D98"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    function sendMessage(){
+        app.database().ref("Requirement").set({
+            name: document.getElementById("Name").value,
+            email: document.getElementById("Email").value,
+            subject: document.getElementById("Subject").value,
+            project: document.getElementById("Project").value
+        })
+    }
+  </script>
 </body>
 </html>
