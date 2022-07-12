@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 // typing animation 
 var typed = new Typed(".typing",{
-    strings: ["Android Developer","Web Developer","Coding Enthusiast","CSE Student","Growing Enterprenur"],
+    strings: ["Android Developer","Flutter App Developer","Web Developer","Coding Enthusiast","CSE Student","Growing Enterprenur"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
