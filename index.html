@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -44,7 +45,7 @@
             <h2 class="title">About Me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="profile.webp" alt="">
+                    <img src="images/profile.webp" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Aman Rajan Singh and I'm a <span class="typing2"></span></div>
@@ -179,6 +180,13 @@
                     </div>
                     <div class="bars">
                         <div class="infor">
+                            <span>Flutter</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="line flutter"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="infor">
                             <span>CSS</span>
                             <span>20%</span>
                         </div>
@@ -192,6 +200,74 @@
                         <div class="line js"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonial" id="testimonial">
+        <div class="max-width">
+            <h2 class="title">Testimonials</h2>
+            <div class="testimonial-content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="testimonialBox">
+                            <img src="images/quote.png" class="quote" width="10px">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
+                                <div class="details">
+                                    <div class="imgBx">
+                                        <img src="images/pic1.jpg">
+                                    </div>
+                                    <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="testimonialBox">
+                            <img src="images/quote.png" class="quote" width="10px">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
+                                <div class="details">
+                                    <div class="imgBx">
+                                        <img src="images/pic2.jpg">
+                                    </div>
+                                    <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="testimonialBox">
+                            <img src="images/quote.png" class="quote" width="10px">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
+                                <div class="details">
+                                    <div class="imgBx">
+                                        <img src="images/pic3.jpg">
+                                    </div>
+                                    <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="testimonialBox">
+                            <img src="images/quote.png" class="quote" width="10px">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
+                                <div class="details">
+                                    <div class="imgBx">
+                                        <img src="images/pic4.jpg">
+                                    </div>
+                                    <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -260,6 +336,7 @@
         <span>Created and Designed By <a href="#">Aman Rajan Singh</a> | <span class="far fa-copyright"></span>2022 All rights reserved.</span>
     </footer>
 <script src="script.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
@@ -319,7 +396,22 @@
     document.getElementById('Subject').innerHTML="";
     document.getElementById('Project').innerHTML="";
   }
-
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop:true,
+    });
   </script>
 </body>
 </html>
