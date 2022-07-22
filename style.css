@@ -546,6 +546,34 @@ footer span a:hover{
     text-decoration: underline;
 }
 
+/* Quick Links */
+.Quick-Link-Box{
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    position: fixed;
+    right: 0;
+    top: 40%;
+}
+.Quick-Link-Box .link{
+    width: 50px;
+    height: 50px;
+    background: dodgerblue;
+    margin: 5px;
+    border-radius: 15px;
+}
+.Quick-Link-Box .link a{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.Quick-Link-Box .link a img{
+    margin: 25%;
+    width: 24px;
+    height: 24px;
+}
+
 
 
 
@@ -628,19 +656,56 @@ footer span a:hover{
     .contact .contact-content .column{
         width:100%;
     }
+    .Quick-Link-Box .link{
+        width: 45px;
+        height: 45px;
+    }
+    .Quick-Link-Box .link a img{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (max-width:850px){
     .skills .skill-content .left .text{
         font-size: 18px;
+    }
+    .Quick-Link-Box{
+        display: flex;
+        position: absolute;
+        top: 63%;
+        left: 5%;
     }
 }
 @media (max-width:730px){
     .home .max-width{
         margin-left: 0px;
     }
+    .Quick-Link-Box .link{
+        width: 40px;
+        height: 40px;
+    }
+    .Quick-Link-Box .link a img{
+        width: 18px;
+        height: 18px;
+    }
 }
 
 @media (max-width:691px){
+    .Quick-Link-Box .link{
+        width: 35px;
+        height: 35px;
+        background: transparent;
+    }
+    .Quick-Link-Box .link a img{
+        width: 18px;
+        height: 18px;
+    }
+    .Quick-Link-Box{
+        display: flex;
+        position: absolute;
+        top: 60%;
+        left: 5%;
+    }
     .max-width{
         padding: 0 23px;
     }
