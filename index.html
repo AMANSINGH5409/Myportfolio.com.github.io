@@ -211,22 +211,23 @@
             <h2 class="title">Testimonials</h2>
             <div class="testimonial-content">
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" id="slideHolder">
                       <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="images/quote.png" class="quote" width="10px">
                             <div class="content">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="images/pic1.jpg">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/myportfolio-c8630.appspot.com/o/ReviewerImages%2F1658513550569?alt=media&token=4e1f6c68-c12b-4fd9-9f02-8220ce0fc1ea">
                                     </div>
-                                    <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+                                    <h3>Nasimuddin Bhanej <br> <span>Founder - Cubesharp Developers</span> </h3>
                                 </div>
+                                <br>
+                                <img src="images/quote.png" class="quote" width="10px">
+                                <p>My experience working with Aman Singh on Android applications has been very smooth. He understands the requirements well and comes up with a workable concept for every programmatic problem.</p>
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide">
+                      <!-- <div class="swiper-slide">
                         <div class="testimonialBox">
                             <img src="images/quote.png" class="quote" width="10px">
                             <div class="content">
@@ -267,7 +268,7 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                      </div> -->
                   </div>
                   <div class="swiper-pagination"></div>
             </div>
@@ -338,13 +339,33 @@
     </footer>
     <div class="Quick-Link-Box">
         <div class="link" id="link1"><a href="#"><img src="images/instagram.png" alt="Instagram"></a></div>
-        <div class="link" id="link2"><a href="#"><img src="images/linkedin.png" alt="LinkedIn"></div>
+        <div class="link" id="link2"><a href="https://www.linkedin.com/in/aman-rajan-singh-2003731ba/"><img src="images/linkedin.png" alt="LinkedIn"></div>
         <div class="link" id="link3"><a href="#"><img src="images/twitter.png" alt="Twitter"></div>
-        <div class="link" id="link4"><a href="#"><img src="images/github.png" alt="Github"></div>
+        <div class="link" id="link4"><a href="https://github.com/AMANSINGH5409?tab=repositories"><img src="images/github.png" alt="Github"></div>
     </div>
 <script src="script.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script type="module">
+
+    // let slideHolder = document.querySelector(".swiper-wrapper");
+    // for(let i=0;i<4;i++){
+    //     let code = `<div class="swiper-slide .swiper-slide-active">
+    //                     <div class="testimonialBox">
+    //                         <img src="images/quote.png" class="quote" width="10px">
+    //                         <div class="content">
+    //                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequatur laboriosam dolore facere laborum, autem debitis enim veritatis a eligendi sequi omnis, commodi saepe temporibus. Dolor itaque voluptates voluptatibus ipsa ipsum libero nemo facilis suscipit.</p>
+    //                             <div class="details">
+    //                                 <div class="imgBx">
+    //                                     <img src="images/pic4.jpg">
+    //                                 </div>
+    //                                 <h3>Someone Famous <br> <span>Creative Design</span> </h3>
+    //                             </div>
+    //                         </div>
+    //                     </div>
+    //                   </div>`;
+    //     slideHolder.innerHTML += code;
+    // }
+
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
     import { getDatabase,ref,set } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js";
@@ -411,7 +432,7 @@
       centeredSlides: true,
       slidesPerView: "auto",
       coverflowEffect: {
-        rotate: 0,
+        rotate:0,
         stretch: 0,
         depth: 100,
         modifier: 2,
